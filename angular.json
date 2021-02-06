@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "angular100days"
+  "defaultProject": "angular100days",
+  "cli": {
+    "analytics": false
+  }
 }

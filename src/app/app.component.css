@@ -1,3 +1,7 @@
 .odd {
   background-color: antiquewhite;
 }
+
+.right-margin {
+  margin-right: 5px;
+}

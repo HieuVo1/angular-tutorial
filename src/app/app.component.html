@@ -1,10 +1,19 @@
-<app-hello *ngIf="age >= 18; else under18"></app-hello>
+<ul>
+  <li *ngFor="let user of users;index as i; odd as odd; trackBy:trackByID" [class.odd]="odd">{{user.value}}</li>
+</ul>
 
-<ng-template #under18>
-  <div class="">You are too young</div>
+<ng-container *ngIf="tags.length >0; else noUser">
+  <button (click)="Add()" *ngFor="let l of tags; last as isLast" [class.right-margin]="!isLast">{{l}}</button>
+</ng-container>
+<ng-template #noUser>
+  <p>No user</p>
 </ng-template>
 
-
-<button (click)="age = age - 1">-</button>
-Age: {{age}}
-<button (click)="age = age + 1">+</button>
+<!--
+  - index: so thu tu  cua item hien tai
+  - count: do dai cua mang
+  - first: true neu laf item dau tien trong mang
+  - last: true neu la item cuoi cung
+  - even: true neu item o vi tri chan
+  - odd: true neu item o vi tri le
+ -->

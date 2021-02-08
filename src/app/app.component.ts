@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   age: number = 15;
+  isDanger = true;
+  isWarning = true;
 }

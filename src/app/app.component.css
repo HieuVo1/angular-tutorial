@@ -1,3 +1,16 @@
 .odd {
   background-color: antiquewhite;
 }
+
+.box {
+  height: 50px;
+  width: 100px;
+  border: 1px solid black;
+}
+.yellow-background {
+  background-color: yellow;
+}
+
+.red-border {
+  border: 1px solid red;
+}

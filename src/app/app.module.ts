@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HelloComponent } from './hello/hello.component';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
+import { AuthorListComponent } from './author-list/author-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    AuthorDetailsComponent,
+    AuthorListComponent,
   ],
   imports: [
     BrowserModule,

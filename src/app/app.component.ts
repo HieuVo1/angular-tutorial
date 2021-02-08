@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   age: number = 15;
+  // Data Down: parent component tuong tac voi child component
+  //Event Up: child component tuong tac voi child component
 }

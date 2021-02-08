@@ -1,10 +1,4 @@
-<app-hello *ngIf="age >= 18; else under18"></app-hello>
-
-<ng-template #under18>
-  <div class="">You are too young</div>
-</ng-template>
-
-
-<button (click)="age = age - 1">-</button>
-Age: {{age}}
-<button (click)="age = age + 1">+</button>
+<app-progress-bar></app-progress-bar>
+<br>
+<app-progress-bar [progress]="currentProgress" [progressColor]="'blue'"></app-progress-bar>
+<button (click)="currentProgress = currentProgress + 1">Increase</button>

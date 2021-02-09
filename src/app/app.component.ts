@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = "Custom";
-  isCheck = true;
+  isCheck1 = true;
+  isCheck2 = true;
 }

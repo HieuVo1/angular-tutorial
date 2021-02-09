@@ -1,3 +1,9 @@
-<input type="text" [ngModel]='name' (ngModelChange)="name = $event">
+<input #nameInput type="text" [ngModel]='name' (ngModelChange)="name = $event">
 <p>This is name: {{name}}</p>
-<app-toggle (checkedChange)="isCheck = $event" [checked]="isCheck"></app-toggle>
+<button (click)="showLast = !showLast">Toggle</button>
+<app-toggle [(checked)]="isCheck"></app-toggle>
+<app-toggle [(checked)]="isCheck"></app-toggle>
+<app-toggle [(checked)]="isCheck"></app-toggle>
+<ng-container *ngIf="showLast">
+  <app-toggle [(checked)]="isCheck"></app-toggle>
+</ng-container>

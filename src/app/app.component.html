@@ -1,0 +1,23 @@
+<h2>Ng-template</h2>
+<div class="card mx-4">
+  <div class="card-header">
+    You have selected <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>.
+  </div>
+  <div class="card-body">
+    There are <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> was selected.
+  </div>
+  <div class="card-footer">
+    You have selected <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>.
+  </div>
+</div>
+
+<ng-template #counterTmpl>
+  <span class="badge badge-danger">{{ counter }} </span> items
+</ng-template>
+
+<app-tab [navs]="navs" [linkTemplate]="linkTemplate"></app-tab>
+
+
+<ng-template #linkTemplate let-l>
+  {{l}}
+</ng-template>

@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  counter: number = 1;
+  navs = ["Active", 'link 1', "link 2"];
 }

@@ -2,6 +2,7 @@
 // co the alias cho no
 
 import { Component, HostBinding, Input } from "@angular/core";
+import { Observable } from "rxjs";
 
 type StringOrNumber = string | number;
 
@@ -75,10 +76,9 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 // ReturnType: trả về type của giá trị mà function T trả về.
 type Result = ReturnType<() => string>; // string
 
-type Result = ReturnType<() => StringOrNumber>;
+type Result1 = ReturnType<() => StringOrNumber>;
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 // Omit: loại bỏ type có key là K trong T
 type PersonWithoutPassword = Omit<Person, 'password'>; // {firstName: string, lastName: string}
-

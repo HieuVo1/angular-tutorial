@@ -1,0 +1,34 @@
+<!-- <app-tab-group [(activeIndex)]="currentIndex">
+  <app-tab-panel title="First tab">First tab content</app-tab-panel>
+  <app-tab-panel title="Second tab">Second tab content</app-tab-panel>
+  <app-tab-panel title="Third tab">Third tab content</app-tab-panel>
+  <app-tab-panel title="Fourth tab">Fourth tab content</app-tab-panel>
+</app-tab-group>
+<div></div> -->
+<button class="btn btn-primary" (click)="showTab4 = !showTab4">Toggle tab 4</button>
+<app-tab-bs-group [(activeIndex)]="currentIndex">
+  <app-tab-panel title="First tab">
+    <ng-template tabContent>
+      First tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Second tab">
+    <ng-template tabContent>
+      Second tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Third tab">
+    <ng-template tabContent>
+      Third tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Fourth tab" *ngIf="showTab4">
+    <ng-template tabContent>
+      Fourth tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+</app-tab-bs-group>

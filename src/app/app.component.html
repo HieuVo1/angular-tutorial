@@ -1,0 +1,41 @@
+<!-- date -->
+<p>{{currentDate | date}}</p>
+<p>{{currentDate | date:'shortDate'}}</p>
+<p>{{currentDate | date:'mediumDate'}}</p>
+<p>{{currentDate | date:'fullDate'}}</p>
+<p>{{currentDate | date:'yyyy-MM-dd'}}</p>
+
+<!-- lowercase -->
+<p>{{'Trung Hieu'| lowercase}}</p>
+<!-- uppercase -->
+<p>{{'Trung Hieu' | uppercase}}</p>
+
+<!-- currency -->
+<p>{{250 | currency}}</p>
+<p>{{250000 | currency:'VND'}}</p>
+
+<!-- number -->
+<p>{{2.2341231 | number:'1.1-5'}}</p>
+
+<!-- percent -->
+<p>{{0.57|percent}}</p>
+
+<!-- json -->
+<p>{{user | json}}</p>
+
+<!-- async -->
+<!-- <p>{{interval$ |async}}</p> -->
+
+<p>{{addr | formatAddress:'123'}}</p>
+
+Full users:
+<ul>
+  <li *ngFor="let user of users">{{user.name}} - {{user.age}}</li>
+</ul>
+
+Adult users:
+<ul>
+  <li *ngFor="let user of users | adult">{{user.name}} - {{user.age}}</li>
+</ul>
+
+<button (click)="addUser()">Add</button>

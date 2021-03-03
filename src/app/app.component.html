@@ -1,0 +1,10 @@
+<input type="text" [formControl]="queryControl" placeholder="Search...">
+<br>
+<p *ngIf="loading">
+  Loading {{queryControl.value ?'with value:"'+ queryControl.value + '"...':'...'}}
+</p>
+<ul *ngIf="!loading">
+  <li *ngFor="let user of users">
+    <pre>{{user | json}}</pre>
+  </li>
+</ul>
